@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/core.css">
+</head>
+<body>
+  
+  <div id="wrapper">
+    <div id="container">
+      
+      <!-- Bloque 1 -->
+      <div id="bloque1">
+        <div class="cajaPregunta">Pregunta 1</div>
+        <p>
+          <ul class="cajaRespuestas">
+            <li class="resp resp0" data-item="0"></li>
+            <li class="resp resp1" data-item="1"></li>
+            <li class="resp resp2" data-item="2"></li>
+            <li class="resp resp3" data-item="3"></li>
+            <li class="resp resp4" data-item="4"></li>
+          </ul>
+        </p>
+      </div>
+      <!-- /Bloque 1 -->
+    
+      <!-- Bloque 2 -->
+      <div id="bloque2">
+        <div class="cajaPregunta"></div>
+        <p>
+          <ul class="cajaRespuestas">
+            <li class="dragResp resp0" data-item="0"></li>
+            <li class="dragResp resp1" data-item="1"></li>
+            <li class="dragResp resp2" data-item="2"></li>
+            <li class="dragResp resp3" data-item="3"></li>
+            <li class="dragResp resp4" data-item="4"></li>
+          </ul>
+        </p>
+
+        <div id="objetoDroppable"></div>
+      </div>
+      <!-- /Bloque 2 -->
+      
+      <!-- Bloque 3 -->
+      <div id="bloque3">
+        <div class="cajaPregunta"></div>
+        <div class="cajaRespuestas">
+          <table id="preguntasRespuestas"></table>
+          <input type="button" value="Siguiente" class="btnSiguiente" />
+        </div>
+      </div>
+      <!-- /Bloque 3 -->
+
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/exVocacional.js"></script>
+  <script>
+    $(function(){ $.exVocacional(); })
+  </script>
+</body>
+</html>
