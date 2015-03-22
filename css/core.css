@@ -1,7 +1,7 @@
 #wrapper{ position: fixed; width: 100%; height: 100%; }
   #container{ width: 800px; margin: 0 auto; }
   
-  #bloque1, #bloque2, #bloque3{ display:none; }
+  div[id^="bloque"]{ display:none; }
   
   .cajaPregunta{
     position: relative;

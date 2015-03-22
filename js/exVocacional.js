@@ -42,10 +42,10 @@
         // Animamos la caja que contiene las respuestas, para que se desplacen a la posicion 0
         o.cajaRespuestas.animate( {right: 0}, 1500 );
         // Mostramos Respuestas dinamicamente
-        $.each(o.respuestas.reverse(), function(index, val) {
-           $( '.resp'+ index ).html( val );
-        });
-        
+        for (var i = o.respuestas.length - 1; i >= 0; i--) {
+           $( '.resp'+ i ).html( o.respuestas[i] );
+          
+        };
       },
       /**
        * [cambiarPregunta Cambia la pregunta]
@@ -115,6 +115,8 @@
        * @param  {[object]} o [Contiene el objeto para acceder a cualquier variable que este dentro de settings]
        */
       siguienteBloque: function( o ){
+        console.log('Tus datos registrados hasta ahorita');
+        console.log( o.result );
         // Ocultamos el bloque(set)
         methods.ocultarBloque( o );
         // Incrementamos la variable que nos indica en que bloque(set) estamos
@@ -147,9 +149,9 @@
               toInsert += '<select>'
                 toInsert += '<option value="5">- Seleccionar -</option>';
                 // Creamos las respuestas
-                $.each( o.respuestas.reverse(), function(key, item) {
-                  toInsert += '<option value="'+ key +'">'+ item +'</option>';
-                });
+                for (var i = o.respuestas.length - 1; i >= 0; i--) {
+                  toInsert += '<option value="'+ i +'">'+ o.respuestas[i] +'</option>';
+                };
               toInsert += '</select>';
             toInsert += '</td>';
           toInsert += '</tr>';
@@ -238,7 +240,7 @@
         drop: function( event, ui ) 
         {
           var block = "bloque"+ o.bloque,
-          respuesta = $(this).data('item');
+          respuesta = ui.draggable.data('item');
           
           // Almacenamos la respuesta seleccionada
           o.result.push( respuesta );
@@ -291,8 +293,13 @@
       // de las 5 posibles
       if (vacio == -1)
       {
-        alert("Continua");
+        // Ya que el usuario ha seleccionado por lo menos una opcion
+        // agrego el arreglo temporal a mi verdadero arreglo de respuestas
+        o.result = $.merge( o.result, respuestasTmp );
+        methods.siguienteBloque( o );
       }
+      // Si el usuario tiene por lo menos una respuesta no seleccionada
+      // entonces no podra avanzar a la siguiente etapa
       else  
       {
         alert("Elementos vacios");
