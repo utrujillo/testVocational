@@ -149,9 +149,9 @@
               toInsert += '<select>'
                 toInsert += '<option value="5">- Seleccionar -</option>';
                 // Creamos las respuestas
-                $.each( o.respuestas.reverse(), function(key, item) {
-                  toInsert += '<option value="'+ key +'">'+ item +'</option>';
-                });
+                for (var i = o.respuestas.length - 1; i >= 0; i--) {
+                  toInsert += '<option value="'+ i +'">'+ o.respuestas[i] +'</option>';
+                };
               toInsert += '</select>';
             toInsert += '</td>';
           toInsert += '</tr>';
