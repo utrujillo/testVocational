@@ -173,7 +173,8 @@
      * @type {Object}
      */
     var settings = {
-      bloque: 1,
+      //Esta variable sirve para hacer debug e indicar al plugin a partir de que bloque deeseamos iniciarokok
+      bloque: 5, 
       cajaPregunta: $('.cajaPregunta'),
       cajaRespuestas: $('.cajaRespuestas'),
       pr: $('#preguntasRespuestas'),
@@ -234,8 +235,8 @@
      *  Este set va a permitir hacer drag a la respuesta, hacia el objeto droppable creado
      */
     $(".dragResp" ).draggable({ revert: true });
-
-    $( "#objetoDroppable" ).droppable(
+// es en el segundo en realidad, pero probemos
+    $( ".objetoDroppable" ).droppable(
       {
         drop: function( event, ui ) 
         {
