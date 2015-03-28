@@ -177,7 +177,7 @@
       bloque: 1, 
       cajaPregunta: $('.cajaPregunta'),
       cajaRespuestas: $('.cajaRespuestas'),
-      pr: $('.preguntasRespuestas'),
+      pr: $('#preguntasRespuestas'),
       pos: 0,
       preguntas: {
         bloque1: ["1. Atender y cuidar a enfermos.", "2.  Intervenir activamente en discusiones de clase.", "3. Escribir cuentos, crónicas o artículos.", "4. Dibujar y pintar.", "5. Cantar en un orfeón estudiantil.",
