@@ -203,7 +203,6 @@
     //      Flujo del Slider
     //======================================
     methods.init( o );
-
     /**
      *  Programando el set 1
      *  Este set va a permitir seleccionar la respuesta utilizando el evento click
