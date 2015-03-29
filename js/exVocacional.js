@@ -174,18 +174,24 @@
      */
     var settings = {
       //Esta variable sirve para hacer debug e indicar al plugin a partir de que bloque deeseamos iniciarokok
-      bloque: 5, 
+      bloque: 1, 
       cajaPregunta: $('.cajaPregunta'),
       cajaRespuestas: $('.cajaRespuestas'),
       pr: $('#preguntasRespuestas'),
       pos: 0,
       preguntas: {
-        bloque1: ["¿Quién eres?", "¿Qué te gusta hacer?", "preg 3", "Preg 4", "preguntas 5"],
-        bloque2: ["Pregunta 6", "Pregunta 7", "preg 8", "Preg 9", "pregunta 10"],
-        bloque3: ["Pregunta 11", "Pregunta 12", "preg 13", "Preg 14", "pregunta 15"],
-        bloque4: ["Pregunta 16", "Pregunta 17", "preg 18", "Preg 19", "pregunta 20"],
-        bloque5: ["Pregunta 21", "Pregunta 22", "preg 23", "Preg 24", "pregunta 25"],
-        bloque6: ["Pregunta 26", "Pregunta 27", "preg 28", "Preg 29", "pregunta 30"],
+        bloque1: ["1. Atender y cuidar a enfermos.", "2.  Intervenir activamente en discusiones de clase.", "3. Escribir cuentos, crónicas o artículos.", "4. Dibujar y pintar.", "5. Cantar en un orfeón estudiantil.",
+                  "6.  Llevar en orden tus libros y cuadernos.","7. Conocer y estudiar la estructura de las plantas y animales.","8.  Resolver mecanizaciones numéricas.","9. Armar o desarmar objetos mecánicos.","10. Salir de excursión."],
+        bloque2: ["11.  Proteger a los muchachos  menores del grupo.", "12. Ser jefe de una sociedad.", "13.  Leer obras literarias.", "14. Moldear el barro, plastilina o cualquier otro material.", "15.  Escuchar música clásica.",
+                  "16.  Ordenar y clasificar los libros de una biblioteca.","17.  Hacer experimentos en un laboratorio.","18. Resolver problemas de aritmética.","19. Manejar herramienta y maquinaria.","20. Pertenecer a un club de exploradores."],
+        bloque3: ["21.  Ser miembro de una sociedad de ayuda y asistencia.", "22. Dirigir la campaña política de un candidato estudiantil. ", "23.  Hacer versos para una publicación.", "24. Encargarse del decorado de un lugar para un festival.", "25.  Aprender a tocar un instrumento musical.",
+                  "26.  Aprender a escribir en maquina y taquigrafía.","27. Investigar el origen de las costumbre de los pueblos.","28. Llevar las cuentas de una institución.","29.  Construir objetos y muebles.","30.  Trabajar al aire libre fuera de la ciudad."],
+        bloque4: ["31.  Enseñar a leer a los analfabetos.", "32.  Hacer propaganda para la difusión de una idea.", "33. Representar un papel en una obra teatral.", "34.  Idear o diseñar el escudo de un club o sociedad.", "35. Ser miembro de una sociedad musical.",
+                  "36.  Ayudar a calificar pruebas.","37. Estudiar y entender las causas de los movimientos sociales.","38. Explicar a otros como resolver problemas de matemáticas.","39.  Reparar las instalaciones eléctricas;  de gas o de plomería en su casa.","40. Sembrar y planta en una granja durante las vacaciones."],
+        bloque5: ["41.  Ayudar a los compañeros  en sus dificultades y preocupaciones.", "42.  Leer biografías de políticos eminentes.", "43. Participar en un concurso de oratoria.", "44. Diseñar el vestuario para una función teatral.", "45. Leer biografías de músicos eminentes.",
+                  "46.  Encargarse del archivo y de los documentos de una sociedad.","47. Leer revistas y libros científicas.","48. Participar en concursos de matemáticas.","49. Proyectar y dirigir alguna constricción.","50.  Atender animales en un rancho durante las vaciones."],
+        bloque6: ["51.  Funcionario al servicio de las clases humildes.", "52.  Experto en relaciones sociales de una gran empresa.", "53.  Escritor de un periódico o empresa editorial.", "54.  Dibujante profesional de una empresa.", "55.  Concertista de una sinfónica.",
+                  "56.  Técnico organizador de oficinas.","57.  Investigar en un laboratorio.","58. Experto calculista en una institución.","59.  Perito mecánico en un gran taller.","60.  Técnico cuyas actividades se desempeñen fuera de la ciudad."],
       },
       respuestas: [ 'Me desagrada mucho', 'Me desagrada poco', 'Me es indiferente', 'Me gusta algo', 'Me gusta mucho' ],
       result:[],
@@ -197,7 +203,6 @@
     //      Flujo del Slider
     //======================================
     methods.init( o );
-
     /**
      *  Programando el set 1
      *  Este set va a permitir seleccionar la respuesta utilizando el evento click
