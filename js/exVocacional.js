@@ -125,6 +125,8 @@
         // Reiniciamos la variable pos, para que en el siguiente bloque(set)
         // las preguntas empiezen a mostrarse desde la primera posicion
         o.pos = 0;
+        //Mensaje al termino de cada bloque
+        alert("Continuamos con siguiente bloque")
         // Mostramos el nuevo bloque
         methods.mostrarBloque( o );
         // Restauramos las cajas
