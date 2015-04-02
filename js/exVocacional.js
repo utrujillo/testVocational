@@ -117,22 +117,28 @@
       siguienteBloque: function( o ){
         console.log('Tus datos registrados hasta ahorita');
         console.log( o.result );
-        // Ocultamos el bloque(set)
-        methods.ocultarBloque( o );
-        // Incrementamos la variable que nos indica en que bloque(set) estamos
-        // esto lo hacemos porque vamos a cambiar de bloque y queremos que se muestre el siguiente
-        o.bloque += 1;
-        // Reiniciamos la variable pos, para que en el siguiente bloque(set)
-        // las preguntas empiezen a mostrarse desde la primera posicion
-        o.pos = 0;
-        //Mensaje al termino de cada bloque
-        alert("Continuamos con siguiente bloque")
-        // Mostramos el nuevo bloque
-        methods.mostrarBloque( o );
-        // Restauramos las cajas
-        methods.restaurarCajas( o );
-        // Verificamos en que bloque estamos, para saber que accion tomar
-        methods.verificaBloque( o );
+        if( o.bloque != _.size( o.preguntas ) ){
+          // Ocultamos el bloque(set)
+          methods.ocultarBloque( o );
+          // Incrementamos la variable que nos indica en que bloque(set) estamos
+          // esto lo hacemos porque vamos a cambiar de bloque y queremos que se muestre el siguiente
+          o.bloque += 1;
+          // Reiniciamos la variable pos, para que en el siguiente bloque(set)
+          // las preguntas empiezen a mostrarse desde la primera posicion
+          o.pos = 0;
+          //Mensaje al termino de cada bloque
+          alert("Continuamos con siguiente bloque")
+          // Mostramos el nuevo bloque
+          methods.mostrarBloque( o );
+          // Restauramos las cajas
+          methods.restaurarCajas( o );
+          // Verificamos en que bloque estamos, para saber que accion tomar
+          methods.verificaBloque( o );
+        }
+        else
+        {
+          alert("Hemos terminado el proceso");
+        }
       },
       /**
        * [creaPreguntasRespuestas Metodo utilizado en el bloque tipo 3, que generara preguntas y respuestas dinamicamente]
@@ -179,7 +185,7 @@
       bloque: 1, 
       cajaPregunta: $('.cajaPregunta'),
       cajaRespuestas: $('.cajaRespuestas'),
-      pr: $('#preguntasRespuestas'),
+      pr: $('.preguntasRespuestas'),
       pos: 0,
       preguntas: {
         bloque1: ["1. Atender y cuidar a enfermos.", "2.  Intervenir activamente en discusiones de clase.", "3. Escribir cuentos, crónicas o artículos.", "4. Dibujar y pintar.", "5. Cantar en un orfeón estudiantil.",
@@ -242,7 +248,7 @@
      *  Este set va a permitir hacer drag a la respuesta, hacia el objeto droppable creado
      */
     $(".dragResp" ).draggable({ revert: true });
-// es en el segundo en realidad, pero probemos
+    // es en el segundo en realidad, pero probemos
     $( ".objetoDroppable" ).droppable(
       {
         drop: function( event, ui ) 
@@ -288,7 +294,7 @@
       var respuestasTmp = [];
       
       // Obtenemos todas las respuestas que hay actualmente en nuestro select
-      $('select').each(function() 
+      $('#bloque'+ o.bloque +' select').each(function() 
       {
         respuestasTmp.push( parseInt( $(this).val() ) );
       });
