@@ -135,7 +135,7 @@
         }
         else
         {
-          alert("Hemos terminado el proceso");
+          $("#myModalAlert2").modal('show');
           $("#myModal").modal('');
         }
       },
