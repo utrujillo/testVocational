@@ -126,8 +126,6 @@
           // Reiniciamos la variable pos, para que en el siguiente bloque(set)
           // las preguntas empiezen a mostrarse desde la primera posicion
           o.pos = 0;
-          //Mensaje al termino de cada bloque
-          alert("Continuamos con siguiente bloque")
           // Mostramos el nuevo bloque
           methods.mostrarBloque( o );
           // Restauramos las cajas
@@ -137,7 +135,8 @@
         }
         else
         {
-          alert("Hemos terminado el proceso");
+          $("#myModalAlert2").modal('show');
+          $("#myModal").modal('');
         }
       },
       /**
@@ -211,6 +210,8 @@
     //      Flujo del Slider
     //======================================
     methods.init( o );
+
+    $("#myModal").modal('show');
     /**
      *  Programando el set 1
      *  Este set va a permitir seleccionar la respuesta utilizando el evento click
@@ -240,6 +241,7 @@
       else
       {
         methods.siguienteBloque( o );
+        $("#myModal2").modal('show');
       }
     });
 
@@ -276,6 +278,7 @@
           else
           {
             methods.siguienteBloque( o );
+            $("#myModal3").modal('show');
           }
         }
       });
@@ -311,12 +314,13 @@
         // agrego el arreglo temporal a mi verdadero arreglo de respuestas
         o.result = $.merge( o.result, respuestasTmp );
         methods.siguienteBloque( o );
+        $("#myModal").modal('show');
       }
       // Si el usuario tiene por lo menos una respuesta no seleccionada
       // entonces no podra avanzar a la siguiente etapa
       else  
       {
-        alert("Elementos vacios");
+         $("#myModalAlert").modal('show');
       };
 
 
