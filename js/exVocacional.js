@@ -136,6 +136,7 @@
         else
         {
           alert("Hemos terminado el proceso");
+          $("#myModal").modal('');
         }
       },
       /**
@@ -319,7 +320,7 @@
       // entonces no podra avanzar a la siguiente etapa
       else  
       {
-        alert("Elementos vacios");
+         $("#myModalAlert").modal('show');
       };
 
 
