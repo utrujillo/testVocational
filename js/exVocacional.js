@@ -166,7 +166,138 @@
 
         // Insertamos el elemento generado dentro de nuestro objeto
         o.pr.html( toInsert );
-      }
+      },
+
+      sumaArray: function(array){
+        var suma = 0;
+
+        $(array).each(function(index, valor){
+          suma += valor;
+        });
+        return suma;
+      },
+
+      CalculateResults: function(o){
+
+          $(o.result).each(function(index, valor) {
+            var indice = parseInt(index + 1);
+
+            switch (indice){
+              case 1: case 11: case 21: case 31: case 41: case 51:{
+                o.ServicioSocial.push(valor);
+              } break;
+              case 2: case 12: case 22: case 32: case 42: case 52:{
+                o.EjecutivoPersuasivo.push( valor );
+              } break;
+              case 3: case 13: case 23: case 33: case 43: case 53:{
+                o.Verbal.push( valor );
+              } break;
+              case 4: case 14: case 24: case 34: case 44: case 54:{
+                o.ArtesPlasticas.push( valor );
+              } break; 
+
+              case 5: case 15: case 25: case 35: case 45: case 55:{
+                o.Musical.push( valor );
+              } break; 
+
+              case 6: case 16: case 26: case 36: case 46: case 56:{
+                o.OrganizacionYOficina.push( valor );
+              } break;
+
+              case 7: case 17: case 27: case 37: case 47: case 57:{
+                o.Cientifico.push( valor );
+              } break;
+
+              case 8: case 18: case 28: case 38: case 48: case 58:{
+                o.CalculoNumerico.push( valor );
+              } break;
+
+              case 9: case 19: case 29: case 39: case 49: case 59:{
+                o.Mecanico.push( valor );
+              } break;
+
+              case 10: case 20: case 30: case 40: case 50: case 60:{
+                o.AireLibre.push( valor );
+              } break;   
+            }
+          });
+
+      },
+      showGraphic: function(o){
+    
+         var polarData = [
+            {
+              value: methods.sumaArray( o.ServicioSocial ),
+              color:"#F7464A",
+              highlight: "#FF5A5E",
+              label: "Servicio Social"
+            },
+            {
+              value: methods.sumaArray(o.EjecutivoPersuasivo),
+              color: "#46BFBD",
+              highlight: "#5AD3D1",
+              label: "Ejecutivo Persuasivo"
+            },
+            {
+              value: methods.sumaArray(o.Verbal),
+              color: "#FDB45C",
+              highlight: "#FFC870",
+              label: "Verbal"
+            },
+            {
+              value: methods.sumaArray(o.ArtesPlasticas),
+              color: "#949FB1",
+              highlight: "#A8B3C5",
+              label: "Artes Plasticas"
+            },
+            {
+              value: methods.sumaArray(o.Musical),
+              color: "#4D5360",
+              highlight: "#616774",
+              label: "Musical"
+
+            },
+
+            {
+              value: methods.sumaArray( o.OrganizacionYOficina ),
+              color:"#11D721",
+              highlight: "#5EDD73",
+              label: "Organizacion Y Oficina"
+            },
+            {
+              value: methods.sumaArray(o.Cientifico),
+              color: "#F2EF31",
+              highlight: "#E0DA22",
+              label: "Cientifico"
+            },
+            {
+              value: methods.sumaArray(o.CalculoNumerico),
+              color: "#B6620E",
+              highlight: "#C1884F",
+              label: "Calculo Numerico"
+            },
+            {
+              value: methods.sumaArray(o.Mecanico),
+              color: "#5638EB",
+              highlight: "#6B66C5",
+              label: "Mecanico"
+            },
+            {
+              value: methods.sumaArray(o.AireLibre),
+              color: "#C102F1",
+              highlight: "#A63CB8",
+              label: "AireLibre"
+            }
+
+          ];
+
+            var ctx = document.getElementById("chart-area").getContext("2d");
+            window.myPolarArea = new Chart(ctx).PolarArea(polarData, {
+              responsive:true
+            });
+           
+          }
+
   };//methods
 
   /**
@@ -202,6 +333,16 @@
       },
       respuestas: [ 'Me desagrada mucho', 'Me desagrada poco', 'Me es indiferente', 'Me gusta algo', 'Me gusta mucho' ],
       result:[],
+      ServicioSocial:[],
+      EjecutivoPersuasivo:[],
+      Verbal:[],
+      ArtesPlasticas:[],
+      Musical:[],
+      OrganizacionYOficina:[],
+      Cientifico:[],
+      CalculoNumerico:[],
+      Mecanico:[],
+      AireLibre:[],
     }//settings
     
     var o = $.extend( settings, options );
@@ -325,6 +466,14 @@
 
 
     });
+
+      $("#ShowResults").click(function(){
+
+        methods.CalculateResults(o);
+        $("#container").html("");
+        methods.showGraphic(o);
+              
+      });
 
   }//fin exVocacional function
 
