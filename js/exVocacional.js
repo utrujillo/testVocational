@@ -313,6 +313,7 @@
     var settings = {
       //Esta variable sirve para hacer debug e indicar al plugin a partir de que bloque deeseamos iniciarokok
       bloque: 1, 
+      slider: 0,
       cajaPregunta: $('.cajaPregunta'),
       cajaRespuestas: $('.cajaRespuestas'),
       pr: $('.preguntasRespuestas'),
@@ -350,7 +351,7 @@
     //======================================
     //      Flujo del Slider
     //======================================
-    methods.init( o );
+    // methods.init( o );
 
     $("#myModal").modal('show');
     /**

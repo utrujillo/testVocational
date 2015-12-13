@@ -5,14 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>UAA - test</title>
-		<meta name="description" content="Wobbly slideshow effect using Snap.svg" />
-		<meta name="keywords" content="slideshow, wobbly, jelly, effect, svg, snap.svg, web design" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'> -->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/core.css" />
 		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
@@ -20,10 +19,72 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="container">
+
+		<div id="container">
 			<div id="slideshow" class="slideshow">
 				<ul>
 					
+					<!-- Presentación del sistema -->
+					<li>
+						<div class="slide">
+							<img class="icon" src="img/icons/logoUAA.svg" />
+							<blockquote class="bck">
+								<p>Universidad Americana de Acapulco</p>
+								<p>Test Vocacional</p>
+							</blockquote>
+						</div>
+					</li>
+					
+					<!-- Objetivo del Test Vocacional -->
+					<li>
+						<div class="slide">
+							<p>¿Qué es y cuál es su objetivo?</p>
+							<blockquote class="bck">
+ 								<p>Es una prueba que tiene como objetivo darte una orientación sobre la Carrera que mas se adecua a tus intereses.</p>
+							</blockquote>
+						</div>
+					</li>
+
+					<!-- Formulario de Contacto -->
+					<li>
+						<div class="slide">
+							<blockquote class="bck">
+								<p>Aqui va el formulario de contacto</p>
+							</blockquote>
+						</div>
+					</li>
+
+					<!-- Instrucciones generales -->
+					<li>
+						<div class="slide">
+							<p>Instrucciones Generales</p>
+							<blockquote class="bck">
+								<p>A continuación se te presentaran 6 bloques con 10 preguntas cada uno, al final seran 60 preguntas que conforman este test, cada bloque tiene una forma de resolucion e iteracción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: ¿Que me gusta hacer? ¿Qué me interesa?.</p>
+							</blockquote>
+						</div>
+					</li>
+
+					<!-- Bloque 1 -->
+					<li>
+						<div class="slide">
+							
+							<div id="bloque1">
+				        <div class="cajaPregunta"></div>
+					        <p>
+					          <div class="cajaRespuestas">
+					            <div class="resp resp4" data-item="4"></div>
+					            <div class="resp resp3" data-item="3"></div>
+					            <div class="resp resp2" data-item="2"></div>
+					            <div class="resp resp1" data-item="1"></div>
+					            <div class="resp resp0" data-item="0"></div>
+					          </div>
+					        </p>
+					    </div>
+
+						</div>
+					</li>
+					<!-- /Bloque 1 -->
+
 					<li>
 						<div class="slide">
 							<img class="icon" src="img/icons/logoUAA.svg" />
@@ -60,21 +121,24 @@
 						<div class="slide">
 							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
 							<blockquote>
-								<p>I'm an idealist. I don't know where I'm going, but I'm on my way.</blockquote>
+								<p>I'm an idealist. I don't know where I'm going, but I'm on my way.</p>
+							</blockquote>
 						</div>
 					</li>
 					<li>
 						<div class="slide">
 							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
 							<blockquote>
-								<p>I refuse to join any club that would have me as a member.</blockquote>
+								<p>I refuse to join any club that would have me as a member.</p>
+							</blockquote>
 						</div>
 					</li>
 					<li>
 						<div class="slide">
 							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
 							<blockquote>
-								<p>I refuse to join any club that would have me as a member.</blockquote>
+								<p>I refuse to join any club that would have me as a member.</p>
+							</blockquote>
 							<p>Groucho Marx</p>
 						</div>
 					</li>
@@ -82,14 +146,33 @@
 				</ul>
 			</div>
 		</div><!-- /container -->
+		
+		<!-- Funcionamiento Slider -->
 		<script src="js/classie.js"></script>
 		<script src="js/sliderFx.js"></script>
+		
+		<!-- Funcionamiento exVocacional -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/exVocacional.js"></script>
+  
 		<script>
 			(function() {
-				new SliderFx( document.getElementById('slideshow'), {
+				
+				// Inicializando SliderFx
+				var sliderObj = new SliderFx( document.getElementById('slideshow'), {
 					easing : 'cubic-bezier(.8,0,.2,1)'
 				} );
+
+				// Llamando plugin exVocacional
+				$.exVocacional({
+					slider: sliderObj,
+				});
+
 			})();
+
 		</script>
 	</body>
 </html>
