@@ -49,7 +49,7 @@ body,
 	font-weight: normal;
 	bottom: 30px;
 	opacity: 0.8;
-	font-family: 'Flamenco', Arial, sans-serif;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -117,17 +117,28 @@ body,
 .slide h1,
 .slide .bck {
 	margin: 0;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 3.5em;
 	padding-top: 3%;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	font-family: 'Flamenco', Arial, sans-serif;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
 	border: 0;
 	color: #fff;
 }
 
 .slide h1 {
 	margin-bottom: 4%;
+}
+
+.slide h2{
+	margin: 0;
+	font-weight: 200;
+	font-size: 2.5em;
+	padding: 3% 0;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	border: 0;
+	color: #fff;	
 }
 
 .slide > p {
@@ -139,7 +150,7 @@ body,
 .slide .bck {
 	position: relative;
 	margin: 0;
-	padding: 2em 10% 0;
+	padding: 2em 5% 1em;
 }
 
 .slide .bck::before{
@@ -191,6 +202,13 @@ body,
 	}
 
 @media screen and (max-width: 32em) {
+	.slide h1,
+	.slide .bck {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 1024px){
 	.slide h1,
 	.slide .bck {
 		font-size: 2em;

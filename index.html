@@ -4,13 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>UAA - test</title>
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<!-- <link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'> -->
+		<title>UAA - Test Vocacional</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/core.css" />
 		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+		<link rel="stylesheet" type="text/css" href="css/modal/component.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
@@ -19,7 +17,7 @@
 		<![endif]-->
 	</head>
 	<body>
-
+		
 		<div id="container">
 			<div id="slideshow" class="slideshow">
 				<ul>
@@ -28,134 +26,206 @@
 					<li>
 						<div class="slide">
 							<img class="icon" src="img/icons/logoUAA.svg" />
-							<blockquote class="bck">
-								<p>Universidad Americana de Acapulco</p>
-								<p>Test Vocacional</p>
-							</blockquote>
+							<div class="text-center">
+								<h1>Universidad Americana de Acapulco</h1>
+								<h2>Test Vocacional</h2>
+								<button class="siguienteSlide btnBlue">Continuar!</button>
+							</div>
 						</div>
 					</li>
 					
 					<!-- Objetivo del Test Vocacional -->
 					<li>
 						<div class="slide">
-							<p>¿Qué es y cuál es su objetivo?</p>
+							<h1>¿Qué es y cuál es su objetivo?</h1>
 							<blockquote class="bck">
  								<p>Es una prueba que tiene como objetivo darte una orientación sobre la Carrera que mas se adecua a tus intereses.</p>
 							</blockquote>
+							<button class="siguienteSlide btnOrange">Continuar!</button>
 						</div>
 					</li>
 
 					<!-- Formulario de Contacto -->
 					<li>
 						<div class="slide">
-							<blockquote class="bck">
-								<p>Aqui va el formulario de contacto</p>
-							</blockquote>
+							<h2>Formulario de Contacto</h2>
+							<button class="siguienteSlide btnRed">Continuar!</button>
 						</div>
 					</li>
 
 					<!-- Instrucciones generales -->
 					<li>
 						<div class="slide">
-							<p>Instrucciones Generales</p>
+							<h1>Instrucciones Generales</h1>
 							<blockquote class="bck">
-								<p>A continuación se te presentaran 6 bloques con 10 preguntas cada uno, al final seran 60 preguntas que conforman este test, cada bloque tiene una forma de resolucion e iteracción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: ¿Que me gusta hacer? ¿Qué me interesa?.</p>
+								<p>A continuación se te presentaran 6 bloques con 10 preguntas cada uno, al final seran 60 preguntas que conforman este test, cada bloque tiene una forma de resolucion e iteracción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
 							</blockquote>
+							
+							<button class="iniciarTest btnGreen" data-modal="modal-4">Iniciar Test</button>
+
 						</div>
 					</li>
 
 					<!-- Bloque 1 -->
 					<li>
 						<div class="slide">
-							
 							<div id="bloque1">
-				        <div class="cajaPregunta"></div>
-					        <p>
-					          <div class="cajaRespuestas">
-					            <div class="resp resp4" data-item="4"></div>
-					            <div class="resp resp3" data-item="3"></div>
-					            <div class="resp resp2" data-item="2"></div>
-					            <div class="resp resp1" data-item="1"></div>
-					            <div class="resp resp0" data-item="0"></div>
-					          </div>
-					        </p>
-					    </div>
-
+					        	<div class="cajaPregunta"></div>
+						        <p>
+						          <div class="cajaRespuestas">
+						            <div class="resp resp4" data-item="4"></div>
+						            <div class="resp resp3" data-item="3"></div>
+						            <div class="resp resp2" data-item="2"></div>
+						            <div class="resp resp1" data-item="1"></div>
+						            <div class="resp resp0" data-item="0"></div>
+						          </div>
+						        </p>
+						    </div>
 						</div>
 					</li>
 					<!-- /Bloque 1 -->
 
+					<!-- Bloque 2 -->
 					<li>
 						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" />
-							<blockquote>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquid.</p>
-							</blockquote>
-							<div class="answers">
-								<div class="answer0">0</div>
-								<div class="answer1">1</div>
-								<div class="answer2">2</div>
-								<div class="answer3">3</div>
-								<div class="answer4">4</div>
+							<div id="bloque2">
+								<div class="cajaPregunta"></div>
+								<p>
+								  <div class="cajaRespuestas">
+								    <div class="dragResp resp4" data-item="4"></div>
+								    <div class="dragResp resp3" data-item="3"></div>
+								    <div class="dragResp resp2" data-item="2"></div>
+								    <div class="dragResp resp1" data-item="1"></div>
+								    <div class="dragResp resp0" data-item="0"></div>
+								  </div>
+								</p>
+								<div class="objetoDroppable"></div>
 							</div>
+						</div>
+					</li>
+					<!-- /Bloque 2 -->
+					
+					<!-- Bloque 3 -->
+					<li>
+						<div class="slide">
+							<div id="bloque3">
+					        	<div class="cajaPregunta"></div>
+					        	<div class="cajaRespuestas">
+						          <table class="preguntasRespuestas"></table>
+						          <input type="button" value="Siguiente" class="btnSiguiente" />
+					        	</div>
+					      	</div>
+						</div>
+					</li>
+					<!-- /Bloque 3 -->
 
-						</div>
-					</li>
+					<!-- Bloque 4 -->
 					<li>
 						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
-							<blockquote>
-								<p>If you don't know where you are going, any road will get you there.</p>
-							</blockquote>
+							<div id="bloque4">
+					        	<div class="cajaPregunta"></div>
+						        <p>
+						          <div class="cajaRespuestas">
+						            <div class="resp resp4" data-item="4"></div>
+						            <div class="resp resp3" data-item="3"></div>
+						            <div class="resp resp2" data-item="2"></div>
+						            <div class="resp resp1" data-item="1"></div>
+						            <div class="resp resp0" data-item="0"></div>
+						          </div>
+						        </p>
+						    </div>
 						</div>
 					</li>
+					<!-- /Bloque 4 -->
+					
+					<!-- Bloque 5 -->
 					<li>
 						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
-							<blockquote>
-								<p>Procrastination is the art of keeping up with yesterday.</p>
-							</blockquote>
+							<div id="bloque5">
+								<div class="cajaPregunta"></div>
+								<p>
+								  <div class="cajaRespuestas">
+								    <div class="dragResp resp4" data-item="4"></div>
+								    <div class="dragResp resp3" data-item="3"></div>
+								    <div class="dragResp resp2" data-item="2"></div>
+								    <div class="dragResp resp1" data-item="1"></div>
+								    <div class="dragResp resp0" data-item="0"></div>
+								  </div>
+								</p>
+								<div class="objetoDroppable"></div>
+							</div>
 						</div>
 					</li>
+					<!-- Bloque 5 -->
+					
+					<!-- Bloque 6 -->
 					<li>
 						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
-							<blockquote>
-								<p>I'm an idealist. I don't know where I'm going, but I'm on my way.</p>
-							</blockquote>
+							<div id="bloque6">
+					        	<div class="cajaPregunta"></div>
+					        	<div class="cajaRespuestas">
+						          <table class="preguntasRespuestas"></table>
+						          <input type="button" value="Siguiente" class="btnSiguiente" />
+					        	</div>
+					      	</div>
 						</div>
 					</li>
+					<!-- Bloque 6 -->
+					
+					<!-- Resultados -->
 					<li>
 						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
-							<blockquote>
-								<p>I refuse to join any club that would have me as a member.</p>
-							</blockquote>
+							<div id="canvas-holder" style="width:30%">
+				       		 	<canvas id="chart-area" width="300" height="300"/>
+				    		</div>
 						</div>
 					</li>
-					<li>
-						<div class="slide">
-							<img class="icon" src="img/icons/logoUAA.svg" alt="Letter Icon"/>
-							<blockquote>
-								<p>I refuse to join any club that would have me as a member.</p>
-							</blockquote>
-							<p>Groucho Marx</p>
-						</div>
-					</li>
+					<!-- /Resultados -->
 
 				</ul>
 			</div>
 		</div><!-- /container -->
+
+		
+		<!-- Ventana modal instrucciones -->
+		<div class="md-modal md-effect-4 instructions" id="modal-4">
+			<div class="md-content">
+				<h3></h3>
+				<div>
+					<p></p>
+					<button class="md-close btnRed">Comenzar!</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal errores -->
+		<div class="md-modal md-effect-12 modalAlerts" id="modal-12">
+			<div class="md-content">
+				<h3></h3>
+				<div>
+					<p></p>
+					<button class="md-close btnRed">Cerrar!</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="md-overlay"></div><!-- the overlay element -->
+		
+		<!-- Js Compartido -->
+		<script src="js/classie.js"></script>
 		
 		<!-- Funcionamiento Slider -->
-		<script src="js/classie.js"></script>
 		<script src="js/sliderFx.js"></script>
-		
+
+		<!-- Funcionamiento de ventanas Modal -->
+		<script src="js/modal/modalEffects.js"></script>
+
 		<!-- Funcionamiento exVocacional -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/underscore.js"></script>
+		<script src="js/Chart.js"></script>
 		<script src="js/exVocacional.js"></script>
   
 		<script>
