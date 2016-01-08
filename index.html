@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>UAA - Test Vocacional</title>
+		<link rel="shortcut icon" href="img/SoloLogoChico.png" type="image/png" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/core.css" />
 		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
@@ -37,7 +38,7 @@
 					<!-- Objetivo del Test Vocacional -->
 					<li>
 						<div class="slide">
-							<h1>¿Qué es y cuál es su objetivo?</h1>
+							<h1><img src="img/SoloLogoChicoBlanco.png" width="40px" /> ¿Qué es y cuál es su objetivo?</h1>
 							<blockquote class="bck">
  								<p>Es una prueba que tiene como objetivo darte una orientación sobre la Carrera que mas se adecua a tus intereses.</p>
 							</blockquote>
@@ -48,15 +49,48 @@
 					<!-- Formulario de Contacto -->
 					<li>
 						<div class="slide">
-							<h2>Formulario de Contacto</h2>
-							<button class="siguienteSlide btnRed">Continuar!</button>
+							<h2><img src="img/SoloLogoChicoBlanco.png" width="40px" /> Formulario de Contacto</h2>
+							
+
+							<form class="cmxform" id="commentForm" method="get" action="">
+
+							    <label for="cname">Nombre(s) completo</label> <br>
+							    <input name="cname" type="text" id="cname" minlength="3" placeholder="Escribe tu Nombre completo" required />
+								
+								<br>	
+								<br>
+
+								<label for="cemail">E-mail</label> <br>
+								<input name="cemail" type="email" id="cemail" placeholder="Escribe tu  E-mail" required />
+								
+								<br>
+								<br>
+
+								<label for="ctel">Teléfono</label> <br>
+								<input name="ctel" type="number" id="ctel" placeholder="LADA + Teléfono" required />
+								
+								<br>
+								<br>
+							    <label for="cdomicilio">Domicilio</label> <br>
+							    <input name="cdomicilio" type="text" id="cdomicilio" placeholder="Calle, # , Colonia , C.P." required />
+								
+								<br>
+								<br>
+
+							    <label for="ctutor">Nombre del padre o tutor</label> <br>
+							    <input name="ctutor" type="text" id="ctutor" minlength="7" placeholder="Nombre completo" required />
+								<br>
+								<br>
+
+							</form>
+							<button class="submit btnRed" type="submit" value="Submit">Continuar!</button>
 						</div>
 					</li>
 
 					<!-- Instrucciones generales -->
 					<li>
 						<div class="slide">
-							<h1>Instrucciones Generales</h1>
+							<h1><img src="img/SoloLogoChicoBlanco.png" width="40px" /> Instrucciones Generales</h1>
 							<blockquote class="bck">
 								<p>A continuación se te presentaran 6 bloques con 10 preguntas cada uno, al final seran 60 preguntas que conforman este test, cada bloque tiene una forma de resolucion e iteracción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
 							</blockquote>
