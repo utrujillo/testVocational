@@ -132,19 +132,19 @@
 			}
 
 			// keyboard navigation events
-			document.addEventListener( 'keydown', function( ev ) {
-				var keyCode = ev.keyCode || ev.which;
-				switch (keyCode) {
-					// left key
-					case 37:
-						self._navigate('prev');
-						break;
-					// right key
-					case 39:
-						self._navigate('next');
-						break;
-				}
-			} );
+			// document.addEventListener( 'keydown', function( ev ) {
+			// 	var keyCode = ev.keyCode || ev.which;
+			// 	switch (keyCode) {
+			// 		// left key
+			// 		case 37:
+			// 			self._navigate('prev');
+			// 			break;
+			// 		// right key
+			// 		case 39:
+			// 			self._navigate('next');
+			// 			break;
+			// 	}
+			// } );
 		}
 	}
 
