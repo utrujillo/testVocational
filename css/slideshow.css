@@ -118,7 +118,7 @@ body,
 .slide .bck {
 	margin: 0;
 	font-weight: 300;
-	font-size: 3.5em;
+	font-size: 2.5em;
 	padding-top: 3%;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -154,7 +154,7 @@ body,
 }
 
 .slide .bck::before{
-    content: '\201C';
+  /*content: '\201C';*/
     display: block;
     position: absolute;
     top: 0 !important;
