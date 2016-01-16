@@ -564,34 +564,32 @@
       }
 
     });
+
+    // Formulario
+    $(".submit").click(function(event)
+    {
       
-      // Formulario
-      $(".submit").click(function(event)
+      event.preventDefault();
+      var Form = $("#commentForm").serializeArray();
+      var validador = true;
+      
+      for (var i = Form.length - 1; i >= 0; i--) 
       {
-        
-        event.preventDefault();
-        var Form = $("#commentForm").serializeArray();
-        var validador = true;
-        
-          for (var i = Form.length - 1; i >= 0; i--) 
-          {
-              if(Form[i].value.length > 0)
-              {
-                validador = validador && true;
-              }
-              else
-              {
-                validador = validador && false;
-              }
-          };
-
-              if (validador)
-              {
-               o.slider._navigate('next');
-              }
-      });
-
-
+        if(Form[i].value.length > 0)
+        {
+          validador = validador && true;
+        }
+        else
+        {
+          validador = validador && false;
+        }
+      };
+        if (validador)
+        {
+         o.slider._navigate('next');
+        }
+    });
+      
   }//fin exVocacional function
 
 })(jQuery);
