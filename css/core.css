@@ -74,3 +74,7 @@ html, body {
     margin: 80px auto 0;
     z-index: 1;
   }
+
+  #cname, #cemail, #ctel, #cdomicilio, #ctutor{
+  width: 40%;
+}
