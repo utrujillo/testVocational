@@ -30,7 +30,7 @@
 							<div class="text-center">
 								<h1>Universidad Americana de Acapulco</h1>
 								<h2>Test Vocacional</h2>
-								<button class="siguienteSlide btnBlue">Continuar!</button>
+								<button class="siguienteSlide btnOrange"><span class="glyphicon glyphicon-user"></span> Iniciar!</button>
 							</div>
 						</div>
 					</li>
@@ -38,64 +38,70 @@
 					<!-- Objetivo del Test Vocacional -->
 					<li>
 						<div class="slide">
-							<h1><img src="img/SoloLogoChicoBlanco.png" width="40px" /> ¿Qué es y cuál es su objetivo?</h1>
+							<img id="Signo" src="img/Signo.png" />
+							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> ¿Qué es un Test Vocacional?</h1>
 							<blockquote class="bck">
- 								<p align="justify">Es una prueba que tiene como objetivo darte una orientación sobre la Carrera que mas se adecua a tus intereses.</p>
+ 								<p align="justify">Es una prueba que tiene como objetivo darte una orientación sobre la Carrera que mas se adecua a tus intereses y aptitudes.</p>
 							</blockquote>
-							<button class="siguienteSlide btnOrange">Continuar!</button>
+							<button class="siguienteSlide btnOrange">
+								<span class="glyphicon glyphicon-chevron-right"></span> Continuar! 
+							</button>
 						</div>
 					</li>
 
 					<!-- Formulario de Contacto -->
 					<li>
 						<div class="slide">
-							<h2><img src="img/SoloLogoChicoBlanco.png" width="40px" /> Formulario de Contacto</h2>
+							<h2><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Formulario de Contacto</h2>
 							
 
 							<form class="cmxform" id="commentForm" method="get" action="">
 
-							    <label for="cname">Nombre(s) completo</label> <br>
+							    <label class="formLabel" for="cname">Nombre(s) completo</label> <br>
 							    <input name="cname" type="text" id="cname" minlength="3" placeholder="Escribe tu Nombre completo" required />
 								
 								<br>	
 								<br>
 
-								<label for="cemail">E-mail</label> <br>
+								<label class="formLabel" for="cemail">E-mail</label> <br>
 								<input name="cemail" type="email" id="cemail" placeholder="Escribe tu  E-mail" required />
 								
 								<br>
 								<br>
 
-								<label for="ctel">Teléfono</label> <br>
+								<label class="formLabel" for="ctel">Teléfono</label> <br>
 								<input name="ctel" type="number" id="ctel" placeholder="LADA + Teléfono" required />
 								
 								<br>
 								<br>
-							    <label for="cdomicilio">Domicilio</label> <br>
+							    <label class="formLabel" for="cdomicilio">Domicilio</label> <br>
 							    <input name="cdomicilio" type="text" id="cdomicilio" placeholder="Calle, # , Colonia , C.P." required />
 								
 								<br>
 								<br>
 
-							    <label for="ctutor">Nombre del padre o tutor</label> <br>
+							    <label class="formLabel" for="ctutor">Nombre del padre o tutor</label> <br>
 							    <input name="ctutor" type="text" id="ctutor" minlength="7" placeholder="Nombre completo" required />
 								<br>
 								<br>
 
 							</form>
-							<button class="submit btnRed" type="submit" value="Submit">Continuar!</button>
+							<button class="submit btnOrange" type="submit" value="Submit">
+								<span class="glyphicon glyphicon-send"></span> Continuar!
+							</button>
 						</div>
 					</li>
 
 					<!-- Instrucciones generales -->
 					<li>
 						<div class="slide">
-							<h1><img src="img/SoloLogoChicoBlanco.png" width="40px" /> Instrucciones Generales</h1>
+							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Test de Intereses</h1>
+							<h1><span class="glyphicon glyphicon-flag"></span> Instrucciones Generales</h1>
 							<blockquote class="bck">
 								<p align="justify">A continuación se te presentaran 6 bloques con 10 preguntas cada uno, al final seran 60 preguntas que conforman este test, cada bloque tiene una forma de resolucion e iteracción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
 							</blockquote>
 							
-							<button class="iniciarTest btnGreen" data-modal="modal-4">Iniciar Test</button>
+							<button class="iniciarTest btnOrange" data-modal="modal-4"><span class="glyphicon glyphicon-play"></span> Iniciar Test</button>
 
 						</div>
 					</li>
@@ -146,7 +152,8 @@
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
-						          <input type="button" value="Siguiente" class="btnSiguiente" />
+						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
+						          <button class="btnSiguiente btnOrange">Continuar!</button>
 					        	</div>
 					      	</div>
 						</div>
@@ -199,7 +206,10 @@
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
-						          <input type="button" value="Siguiente" class="btnSiguiente" />
+						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
+						          <button class="btnSiguiente btnOrange">
+						          <span class="glyphicon glyphicon-ok"></span> Continuar!
+						      	  </button>
 					        	</div>
 					      	</div>
 						</div>
@@ -227,7 +237,7 @@
 				<h3></h3>
 				<div>
 					<p></p>
-					<button class="md-close btnRed">Comenzar!</button>
+					<button class="md-close btnRed"><span class="glyphicon glyphicon-pencil"></span> Comenzar!</button>
 				</div>
 			</div>
 		</div>
@@ -238,7 +248,7 @@
 				<h3></h3>
 				<div>
 					<p></p>
-					<button class="md-close btnRed">Cerrar!</button>
+					<button class="md-close btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar!</button>
 				</div>
 			</div>
 		</div>

@@ -16,16 +16,17 @@ html, body {
     left: -1500px;
     margin: 0;
     font-weight: 400;
-    font-size: 3.5em;
-    padding: 2em 10% 0;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    font-size: 3.4em;
+    padding: 2em 6% 0;
+    text-shadow: 0 6px 6px rgba(0,0,0,1.05);
     font-family: 'Lato', Calibri, Arial, sans-serif;
+    text-align: justify;
     border: 0;
     color: #fff;
   }
 
   .cajaPregunta:before{
-  /*content: '\201C';*/
+    /*content: '\201C';*/
     display: block;
     position: absolute;
     top: 0;
@@ -46,35 +47,77 @@ html, body {
   ul{ position: relative; list-style: none; width: 100%; padding: 0; text-align: center; }
   .resp{
     position: relative;
-    background: #F24C27;
-    margin-left: 15px;
+    margin-left: 1px;
     display: inline-block;
     font-size: 1em;
     text-align: center;
     color: #fff;
-    height: 20px !important;
+    width: 161px;
+    height: 48px;
+    border: 3px solid #555;
+    background: #428bca;
+    
   }
 
   .dragResp{
-    position: relative;
-    background: #F24C27;
-    margin-left: 15px;
-    display: inline-block;
-    font-size: 1em;
-    text-align: center;
-    color: #fff;
-    z-index: 12;
+     width: 161px; 
+     height: 48px;
+     position: relative;
+     margin-left: 1px;
+     display: inline-block;
+     font-size: 1em;
+     text-align: center;
+     color: #fff; 
+     border: 3px solid #555; 
+     background: #428bca;
+     -webkit-transform: skew(20deg);
+     -moz-transform: skew(20deg);
+     -ms-transform: skew(20deg);
+     -o-transform: skew(20deg);
+     transform: skew(20deg);
+     z-index: 12;
   }
 
   .objetoDroppable{
     width: 100%;
-    height: 200px;
-    background: #89FF6B;
+    height: 0px;
     position: relative;
     margin: 80px auto 0;
-    z-index: 1;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-top: 135px solid #fff;
+    z-index: 1;    
+  }
+  
+  /*label de formulario*/
+  .formLabel{
+    font-size: 1.3em;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
+
   }
 
+  input {
+    height: 40px;
+    width: 40%;
+    background: #fff;
+  }
+    
+  input:focus{
+    background-color: #DEDEDE;
+    border:4px solid #6FB3E8;
+  }
+  
+
   #cname, #cemail, #ctel, #cdomicilio, #ctutor{
-  width: 40%;
-}
+    font-weight: bold;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #3874BB;
+  }
+
+  /* Imagen ? */
+  #Signo{
+    width: 130px;
+    height: 130px;
+  }
