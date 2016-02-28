@@ -344,7 +344,7 @@
       maxDelay: 1500,
       preguntas: {
         // Cuestionario Intereses
-        bloque1: ["1. Atender y cuidar a enfermos.", "2.  Intervenir activamente en discusiones de clase.", "3. Escribir cuentos, crónicas o artículos.", "4. Dibujar y pintar.", "5. Cantar en un orfeón estudiantil.",
+        bloque1: ["1. Atender y cuidar a enfermos.", "2.  Intervenir activamente en discusiones de clase.", "3. Escribir cuentos, crónicas o artículos.", "4. Dibujar y pintar.", "5. Cantar en un coro estudiantil.",
                   "6.  Llevar en orden tus libros y cuadernos.","7. Conocer y estudiar la estructura de las plantas y animales.","8.  Resolver mecanizaciones numéricas.","9. Armar o desarmar objetos mecánicos.","10. Salir de excursión."],
         bloque2: ["11.  Proteger a los muchachos  menores del grupo.", "12. Ser jefe de una sociedad.", "13.  Leer obras literarias.", "14. Moldear el barro, plastilina o cualquier otro material.", "15.  Escuchar música clásica.",
                   "16.  Ordenar y clasificar los libros de una biblioteca.","17.  Hacer experimentos en un laboratorio.","18. Resolver problemas de aritmética.","19. Manejar herramienta y maquinaria.","20. Pertenecer a un club de exploradores."],
@@ -382,17 +382,17 @@
       inst: 0,
       getErrors: false,
       textoModal: {
-        instruccion1: "Lee cuidadosamente la pregunta y selecciona la respuesta que consideres apropiada.",
-        instruccion2: "Lee cuidadosamente la pregunta y arrastra la respuesta que consideres apropiada al recuadro que esta en la parte inferior.",
-        instruccion3: "Lee cuidadosamente las preguntas y contesta acorde a lo que consideres apropiado.",
+        instruccion1: "Lea cuidadosamente la pregunta y seleccione la respuesta que consideres apropiada.",
+        instruccion2: "Lea cuidadosamente la pregunta y arrastre la respuesta que consideres apropiada al recuadro que esta en la parte inferior.",
+        instruccion3: "Lea cuidadosamente las preguntas y seleccione la respuesta que consideres apropiada.",
 
-        instruccion4: "Lee cuidadosamente la pregunta y selecciona la respuesta que consideres apropiada.",
-        instruccion5: "Lee cuidadosamente la pregunta y arrastra la respuesta que consideres apropiada al recuadro que esta en la parte inferior.",
-        instruccion6: "Lee cuidadosamente las preguntas y contesta acorde a lo que consideres apropiado.",
+        instruccion4: "Lea cuidadosamente la pregunta y seleccione la respuesta que consideres apropiada.",
+        instruccion5: "Lea cuidadosamente la pregunta y arrastre la respuesta que consideres apropiada al recuadro que esta en la parte inferior.",
+        instruccion6: "Lea cuidadosamente las preguntas y seleccione la respuesta que consideres apropiada.",
       },
       modalAlerts: {
-        msgError: "<b>¡Cuidado!</b><br />Tienes por lo menos una pregunta por contestar, por favor verifica que tengas todo contestado para poder continuar.",
-        msgFinish: "<b>¡Excelente!</b><br /> Haz concluido con el test, a continuación se presentaran los resultados, presiona el boton <b>Cerrar</b> para visualizarlos",
+        msgError: "<b>¡Cuidado!</b><br />Tiene por lo menos una pregunta por contestar, por favor verifique que tenga todo contestado para poder continuar.",
+        msgFinish: "<b>¡Excelente!</b><br /> Ha concluido con el test, a continuación se presentarán los resultados, presione el boton <b>Cerrar</b> para visualizarlos.",
       },
       respuestas: [ 'Me desagrada mucho', 'Me desagrada poco', 'Me es indiferente', 'Me gusta algo', 'Me gusta mucho' ],
       result:[],
@@ -547,6 +547,10 @@
       methods.showModal( o );
     });
 
+    $('.md-cerrarFormAlert').click(function(){
+       $(this).parents().eq(2).removeClass("md-show");
+    });
+
     $('.md-close').click(function(){
 
       // Limpiando valores de ventana modal
@@ -587,24 +591,32 @@
     {
       
       event.preventDefault();
-      var Form = $("#commentForm").serializeArray();
+      // var Form = $("#commentForm").serializeArray();
       var validador = true;
-      
-      for (var i = Form.length - 1; i >= 0; i--) 
-      {
-        if(Form[i].value.length > 0)
+
+      $("#commentForm input").removeClass('inputError');
+      $("#commentForm input").next('span').remove();
+
+      $("#commentForm input").each(function(){
+        $this = $(this);
+
+        if($this.val().length > 0)
         {
           validador = validador && true;
         }
         else
         {
           validador = validador && false;
+          $this.addClass('inputError');
+          $this.after('<span class="glyphicon glyphicon-remove"></span>');
+          $('.modalForm').addClass('md-show');
         }
-      };
-        if (validador)
-        {
-         o.slider._navigate('next');
-        }
+      });  
+      
+      if (validador)
+      {
+        o.slider._navigate('next');
+      }
     });
     
   }//fin exVocacional function
