@@ -84,7 +84,7 @@ body,
 
 .slideshow ul li > svg {
 	position: relative;
-	fill: #efc75e;
+	fill: #358ebc;
 	z-index: -1;
 }
 
@@ -93,15 +93,15 @@ body,
 }
 
 .slideshow ul li:nth-child(3) > svg {
-	fill: #F36A71;
+	fill: #358ebc;
 }
 
 .slideshow ul li:nth-child(4) > svg {
-	fill: #0C9DA9;
+	fill: #358ebc;
 }
 
 .slideshow ul li:nth-child(6) > svg {
-	fill: #F8555E;
+	fill: #358ebc;
 }
 
 .slide {
@@ -150,11 +150,11 @@ body,
 .slide .bck {
 	position: relative;
 	margin: 0;
-	padding: 2em 5% 1em;
+	padding: 0em 5% 1em;
 }
 
 .slide .bck::before{
-  /*content: '\201C';*/
+    /*content: '\201C';*/
     display: block;
     position: absolute;
     top: 0 !important;
