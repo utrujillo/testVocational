@@ -97,9 +97,9 @@
 						<div class="slide">
 							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Test de Intereses</h1>
 							<h1><span class="glyphicon glyphicon-flag"></span> Instrucciones Generales</h1>
-							<blockquote class="bck">
-								<p align="justify">A continuación se te presentarán 6 bloques con 10 preguntas cada uno, al final serán 60 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
-							</blockquote>
+							
+								<p class="Instrucciones" align="justify">A continuación se te presentarán 6 bloques con 10 preguntas cada uno, al final serán 60 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
+							
 							
 							<button class="iniciarTest btnOrange" data-modal="modal-4"><span class="glyphicon glyphicon-play"></span> Iniciar Test</button>
 
@@ -109,7 +109,7 @@
 					<!-- Bloque 1 -->
 					<li>
 						<div class="slide">
-							<div id="bloque1">
+							<div class="posBloq1" id="bloque1">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -148,7 +148,7 @@
 					<!-- Bloque 3 -->
 					<li>
 						<div class="slide">
-							<div id="bloque3">
+							<div class="posBloq3" id="bloque3">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
@@ -165,7 +165,7 @@
 					<!-- Bloque 4 -->
 					<li>
 						<div class="slide">
-							<div id="bloque4">
+							<div class="posBloq1" id="bloque4">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -204,7 +204,7 @@
 					<!-- Bloque 6 -->
 					<li>
 						<div class="slide">
-							<div id="bloque6">
+							<div class="posBloq3" id="bloque6">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
@@ -284,6 +284,7 @@
 		<script src="js/underscore.js"></script>
 		<script src="js/Chart.js"></script>
 		<script src="js/exVocacional.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
   
 		<script>
 			(function() {

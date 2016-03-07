@@ -14,7 +14,7 @@ button {
 }
 
 /*Colores de botones*/
-.btnRed{ background: #c0392b; color:#fff; }
+.btnRed{ background: #c0392b; color:#fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500;}
 .btnRed:hover{ background: #A5281B; }
 
 .btnBlue{ background: #358ebc; color: #fff; }
@@ -23,7 +23,7 @@ button {
 .btnGreen{ background: #047882; color: #fff; }
 .btnGreen:hover{ background: #036068 ; }
 
-.btnOrange{ background: #EEE666; color: #333; }
+.btnOrange{ background: #EEE666; color: #333; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; }
 .btnOrange:hover{ background: #d7cf56; }
 
 /* 
@@ -106,7 +106,8 @@ perspective effects (not including the modals and the overlay).
 	padding: 0.4em;
 	text-align: center;
 	font-size: 2.4em;
-	font-weight: 300;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 400;
 	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;
