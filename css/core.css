@@ -15,9 +15,9 @@ html, body {
     width: 100%;
     left: -1500px;
     margin: 0;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 3.3em;
-    padding: 2em 10% 0;
+    padding: 2em 2% 0;
     text-shadow: 0 1px 1px rgba(0,0,0,1);
     font-family: 'Lato', Calibri, Arial, sans-serif;
     border: 0;
@@ -58,7 +58,8 @@ html, body {
     margin-left: 1px;
     display: inline-block;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
+    font-weight: 100;
     text-align: center;
     color: #fff;
     width: 165px;
@@ -104,7 +105,8 @@ html, body {
     margin-left: 1px;
     display: inline-block;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
+    font-weight: 100;
     text-align: center;
     color: black;
     width: 165px;
@@ -137,6 +139,7 @@ html, body {
   td{
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 1.6em;
+    font-weight: 100;
     text-align: justify;
     padding: 4px 5px 0 !important;
     color: #fff;
@@ -146,13 +149,26 @@ html, body {
   select{
     color: black !important;
     font-size: .8em !important;
+    font-weight: 100;
+  }
+
+  .posBloq3{
+    position: absolute;
+    top: -50px;
+    text-align: -webkit-center;
+  }
+
+  /*Posición Bloque 1 y 4*/
+
+  .posBloq1{
+    padding: 150px 0px;
   }
   
   /*label de formulario*/
   .formLabel{
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-weight: normal;
+    font-weight: 100;
     color: #fff;
     text-align: center;
     width: 90%;
@@ -167,6 +183,8 @@ html, body {
   #commentForm input {
     height: 40px;
     width: 90%;
+    font-weight: 100;
+    font-size: 1.3em;
     background: rgba(43,65,77,.5);
     border: 1px solid #358ebc;
     padding: 0 10px;
@@ -204,20 +222,61 @@ html, body {
   }
   
   /*Color placeholder*/
+  *::-webkit-input-placeholder {
+      /* Google Chrome y Safari */
+      color: rgba(254,253,253,.5);
+  }
+  *:-moz-placeholder {
+      /* Firefox anterior a 19 */
+      color: rgba(254,253,253,.5) !important;
+  }
+  *::-moz-placeholder {
+      /* Firefox 19 y superior */
+      color: rgba(254,253,253,.5);
+  }
+  *:-ms-input-placeholder {
+      /* Internet Explorer 10 y superior */
+      color: rgba(254,253,253,.5) !important;
+  }
 
-*::-webkit-input-placeholder {
-    /* Google Chrome y Safari */
-    color: rgba(254,253,253,.5);
-}
-*:-moz-placeholder {
-    /* Firefox anterior a 19 */
-    color: rgba(254,253,253,.5);
-}
-*::-moz-placeholder {
-    /* Firefox 19 y superior */
-    color: rgba(254,253,253,.5);
-}
-*:-ms-input-placeholder {
-    /* Internet Explorer 10 y superior */
-    color: rgba(254,253,253,.5) !important;
-}
+  /*Slider de instrucciones*/
+  .Instrucciones{
+    position: relative;
+    font-weight: 100 !important;
+    font-size: 2em;
+    padding: 0em 5% 1em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    border: 0;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2 !important;
+  }
+
+  .containerGrafica{
+    position: relative;
+  }
+
+    .grid12{
+      width: 100%;
+      font-size: 2em;
+      font-weight: 100 !important;
+      margin: 0 auto;
+      color: white;
+    }
+
+    .grid4{
+      width: 32%;
+    }
+
+    .ladoIzq, .ladoDer, .grid4{
+      float: left;
+    }
+    .ladoIzq, .ladoDer{
+      width: 48%;
+      min-height: 300px;
+      border: 1px black solid;
+    }
+    .clearfix{
+      clear: both;
+    }

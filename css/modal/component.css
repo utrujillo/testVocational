@@ -14,17 +14,50 @@ button {
 }
 
 /*Colores de botones*/
-.btnRed{ background: #c0392b; color:#fff; }
+.btnRed{ background: #c0392b; color:#fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500;}
 .btnRed:hover{ background: #A5281B; }
 
-.btnBlue{ background: #358ebc; color: #fff; }
+/*.btnBlue{ background: #358ebc; color: #fff; }
 .btnBlue:hover{ background: #2375a0; }
 
 .btnGreen{ background: #047882; color: #fff; }
 .btnGreen:hover{ background: #036068 ; }
-
-.btnOrange{ background: #EEE666; color: #333; }
+*/
+.btnOrange{ background: #EEE666; color: #333; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; }
 .btnOrange:hover{ background: #d7cf56; }
+
+/* Colores Botones de Conceptos*/
+
+.btnwaterMelon{ background: #F7464A; color:#fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnwaterMelon:hover{ background: #FF5A5E; }
+
+.btnBlueWater{ background: #46BFBD; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnBlueWater:hover{ background: #5AD3D1; }
+
+.btnMamey{ background: #FDB45C; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnMamey:hover{ background: #FFC870 ; }
+
+.btnGray{ background: #949FB1; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnGray:hover{ background: #A8B3C5; }
+
+.btnstrongGray{ background: #4D5360; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnstrongGray:hover{ background: #616774; }
+
+.btngreenLimon{ background: #11D721; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btngreenLimon:hover{ background: #5EDD73; }
+
+.btnYellow{ background: #F2EF31; color: #333; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnYellow:hover{ background: #E0DA22; }
+
+.btnBrown{ background: #B6620E; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnBrown:hover{ background: #C1884F; }
+
+.btnstrongBlue{ background: #5638EB; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnstrongBlue:hover{ background: #6B66C5; }
+
+.btnPurple{ background: #C102F1; color: #fff; font-family: 'Lato', Calibri, Arial, sans-serif; font-weight: 500; width: 70%; }
+.btnPurple:hover{ background: #A63CB8; }
+
 
 /* 
 Styles for the html/body for special modal where we want 3d effects
@@ -106,7 +139,8 @@ perspective effects (not including the modals and the overlay).
 	padding: 0.4em;
 	text-align: center;
 	font-size: 2.4em;
-	font-weight: 300;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 400;
 	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;

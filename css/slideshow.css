@@ -111,13 +111,13 @@ body,
 	right: 16%;
 	padding: 1em;
 	white-space: initial;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .slide h1,
 .slide .bck {
 	margin: 0;
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 2.5em;
 	padding-top: 3%;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
@@ -132,8 +132,8 @@ body,
 
 .slide h2{
 	margin: 0;
-	font-weight: 200;
-	font-size: 2.5em;
+	font-weight: 100;
+	font-size: 3em;
 	padding: 3% 0;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -141,11 +141,11 @@ body,
 	color: #fff;	
 }
 
-.slide > p {
+/*.slide > p {
 	line-height: 1.5;
 	font-size: 0.85em;
 	font-weight: bold;
-}
+}*/
 
 .slide .bck {
 	position: relative;
@@ -201,20 +201,20 @@ body,
 		max-width: 100px;
 	}
 
-@media screen and (max-width: 32em) {
+/*@media screen and (max-width: 32em) {
+	.slide h1,
+	.slide .bck {
+		font-size: 2em;
+	}
+}*/
+
+/*@media screen and (max-width: 1024px){
 	.slide h1,
 	.slide .bck {
 		font-size: 2em;
 	}
 }
-
-@media screen and (max-width: 1024px){
-	.slide h1,
-	.slide .bck {
-		font-size: 2em;
-	}
-}
-
+*/
 @media screen and (max-height: 500px) {
 	.slideshow > nav span {
 		background: none;

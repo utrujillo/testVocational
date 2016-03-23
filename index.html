@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/snap.svg-min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
+		<link rel="stylesheet" href="css/Media.css">
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -97,9 +98,9 @@
 						<div class="slide">
 							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Test de Intereses</h1>
 							<h1><span class="glyphicon glyphicon-flag"></span> Instrucciones Generales</h1>
-							<blockquote class="bck">
-								<p align="justify">A continuación se te presentarán 6 bloques con 10 preguntas cada uno, al final serán 60 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
-							</blockquote>
+							
+								<p class="Instrucciones" align="justify">A continuación se te presentarán 6 bloques con 10 preguntas cada uno, al final serán 60 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
+							
 							
 							<button class="iniciarTest btnOrange" data-modal="modal-4"><span class="glyphicon glyphicon-play"></span> Iniciar Test</button>
 
@@ -109,7 +110,8 @@
 					<!-- Bloque 1 -->
 					<li>
 						<div class="slide">
-							<div id="bloque1">
+							<div class="posBloq1" id="bloque1">
+
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -148,7 +150,7 @@
 					<!-- Bloque 3 -->
 					<li>
 						<div class="slide">
-							<div id="bloque3">
+							<div class="posBloq3" id="bloque3">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
@@ -165,7 +167,7 @@
 					<!-- Bloque 4 -->
 					<li>
 						<div class="slide">
-							<div id="bloque4">
+							<div class="posBloq1" id="bloque4">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -204,7 +206,7 @@
 					<!-- Bloque 6 -->
 					<li>
 						<div class="slide">
-							<div id="bloque6">
+							<div class="posBloq3" id="bloque6">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
@@ -221,9 +223,41 @@
 					<!-- Resultados -->
 					<li>
 						<div class="slide">
-							<div id="canvas-holder" style="width:30%">
-				       		 	<canvas id="chart-area" width="300" height="300"/>
-				    		</div>
+							
+							<div class="containerGrafica">
+								<div class="grid12">
+									Resultados
+								</div>
+								<div class="ladoIzq">
+									<div id="canvas-holder" style="width:30%">
+						       		 	<canvas id="chart-area" width="300" height="300"/>
+						    		</div>
+								</div>
+								<div class="ladoDer">
+									<dl>
+										<dt><button class="btnwaterMelon modalCon1">  Interés por Servicio Social 			    </button></dt>
+										<dt><button class="btnBlueWater modalCon2">   Interés Persuasivo 								    </button></dt>
+										<dt><button class="btnMamey modalCon3">       Interés Verbal 												</button></dt>
+										<dt><button class="btnGray modalCon4">        Interés por Artes Plasticas 					</button></dt>
+										<dt><button class="btnstrongGray modalCon5">  Interés Musical 									    </button></dt>
+										<dt><button class="btngreenLimon modalCon6">  Organización y Oficina 						    </button></dt>
+										<dt><button class="btnYellow modalCon7">      Interés Científico										</button></dt>
+										<dt><button class="btnBrown modalCon8">       Interés por Cálculo Númerico					</button></dt>
+										<dt><button class="btnstrongBlue modalCon9">  Interés Mecánico 									    </button></dt>
+										<dt><button class="btnPurple modalCon10">     Interés por Actividades al Aíre Libre </button></dt>
+									</dl>
+								</div>								
+								<div class="clearfix">
+								
+								<div class="grid12">
+									Eres apto para las siguientes materias
+									<div class="grid4">a</div>
+									<div class="grid4">b</div>
+									<div class="grid4">c</div>
+									<div class="clearfix"></div>
+								</div>
+								</div>
+							</div>
 						</div>
 					</li>
 					<!-- /Resultados -->
@@ -264,8 +298,116 @@
 				</div>
 			</div>
 		</div>
-
 		
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto1" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés de Servicio Social?</h3>
+				<div>
+					<p>Es el gusto por servir a los demás, y en primer lugar por los necesitados, niños y ancianos. </p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto2" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés Persuasivo?</h3>
+				<div>
+					<p>Es el gusto del trato por la gente, a  quienes agrada imponer sus puntos de vista, convencer a los demás respecto a un proyecto, vender algún articulo, etc. </p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto3" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés Verbal?</h3>
+				<div>
+					<p>Es el gusto por la lectura o el placer por expresar sus ideas en forma oral o escrita.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto4" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés de Artes Plasticas?</h3>
+				<div>
+					<p>Es el gusto por hacer trabajos de tipo manual, usando combinaciones de colores, materiales, formas y diseñador.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto5" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés Musical?</h3>
+				<div>
+					<p>Es un marcado gusto por tocar instrumentos musicales, cantar, bailar, leer sobre música, asistir a conciertos, estudiar la vida de destacados compositores, etc.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto6" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés de Organización y Oficina?</h3>
+				<div>
+					<p>Es el gusto por un tipo de trabajo de escritorio que requiere exactitud y precisión.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto7" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés Científico?</h3>
+				<div>
+					<p>Es el placer o gusto por investigar la verdadera razón de los hechos o de las cosas, en descubrir sus causas y en resolver problemas de distinta índole, por mera curiosidad científica y sin pensar en los beneficios económicos que puedan resultar de la investigación. </p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto8" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés de Cálculo Númerico?</h3>
+				<div>
+					<p>Es el gusto por trabajar con números.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto9" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés Mécanico</h3>
+				<div>
+					<p>Es la preferencia por trabajar con maquinas y herramientas, construir o arreglar objetos mecánicos, muebles, artefactos eléctricos, etc</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ventana modal Conceptos -->
+		<div class="md-modal md-effect-2 modalConcepto10" id="modal-2">
+			<div class="md-content">
+				<h3>¿Interés por Actividades al Aíre Libre?</h3>
+				<div>
+					<p>El gusto  por pasar la mayor parte del tiempo en el campo, en los bosques o en el mar, también    por cultivar plantas y cuidar animales.</p>
+					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+				</div>
+			</div>
+		</div>
 		<div class="md-overlay"></div><!-- the overlay element -->
 		
 		<!-- Js Compartido -->
@@ -284,6 +426,7 @@
 		<script src="js/underscore.js"></script>
 		<script src="js/Chart.js"></script>
 		<script src="js/exVocacional.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
   
 		<script>
 			(function() {
