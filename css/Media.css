@@ -2,33 +2,295 @@
    Defining media queries
    =========================================== */
 
-@media screen and (max-width: 924px) {
-  .slide h1, .slide h2, .formLabel, .Instrucciones,
-  .slide .bck {
-    font-size: 1.5em;
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {     
+  #imageForm {
+  background-position: 15% 60%;
+  background-size: 45% auto;
+  left: 10%;
+  top: 0%;
+ }
+    /*Quita Emoticon / Respuestas Click / Me gusta mucho*/
+    #bloque1  .resp .avatar4,
+    #bloque4  .resp .avatar4,        
+    #bloque7  .resp .avatar4,
+    #bloque10 .resp .avatar4{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me gusta algo*/
+    #bloque1  .resp .avatar3,
+    #bloque4  .resp .avatar3,        
+    #bloque7  .resp .avatar3,
+    #bloque10 .resp .avatar3{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me es indiferente*/
+    #bloque1  .resp .avatar2,
+    #bloque4  .resp .avatar2,        
+    #bloque7  .resp .avatar2,
+    #bloque10 .resp .avatar2{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada poco*/
+    #bloque1  .resp .avatar1,
+    #bloque4  .resp .avatar1,        
+    #bloque7  .resp .avatar1,
+    #bloque10 .resp .avatar1{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada mucho*/
+    #bloque1  .resp .avatar0,
+    #bloque4  .resp .avatar0,        
+    #bloque7  .resp .avatar0,
+    #bloque10 .resp .avatar0{
+    display: none;
   }
 }
 
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {  
+  #imageForm {
+  background-position: 15% 60%;
+  background-size: 45% auto;
+  left: 10%;
+  top: 0%;
+  }
+
+    /* Emoticon / Respuestas Click / Me gusta mucho*/
+    #bloque1  .resp .avatar4,
+    #bloque4  .resp .avatar4,        
+    #bloque7  .resp .avatar4,
+    #bloque10 .resp .avatar4{
+    background-size: 60px;
+    position: absolute;
+    bottom: 4px;
+    width: 68px;
+    height: 42px;
+    left: -70px;
+  }
+    /* Emoticon / Respuestas Click / Me gusta algo*/
+    #bloque1  .resp .avatar3,
+    #bloque4  .resp .avatar3,        
+    #bloque7  .resp .avatar3,
+    #bloque10 .resp .avatar3{
+    background-size: 54px;
+    position: absolute;
+    bottom: -6px;
+    width: 59px;
+    height: 52px;
+    left: 163px;
+  }
+    /* Emoticon / Respuestas Click / Me es indiferente*/
+    #bloque1  .resp .avatar2,
+    #bloque4  .resp .avatar2,        
+    #bloque7  .resp .avatar2,
+    #bloque10 .resp .avatar2{
+    background-size: 63px;
+    position: absolute;
+    bottom: -2px;
+    width: 69px;
+    height: 45px;
+    left: -71px;
+  }
+    /* Emoticon / Respuestas Click / Me desagrada poco*/
+    #bloque1  .resp .avatar1,
+    #bloque4  .resp .avatar1,        
+    #bloque7  .resp .avatar1,
+    #bloque10 .resp .avatar1{
+    background-size: 54px;
+    position: absolute;
+    bottom: -6px;
+    width: 59px;
+    height: 52px;
+    left: 163px;
+  }
+    /* Emoticon / Respuestas Click / Me desagrada mucho*/
+    #bloque1  .resp .avatar0,
+    #bloque4  .resp .avatar0,        
+    #bloque7  .resp .avatar0,
+    #bloque10 .resp .avatar0{
+    background-size: 54px;
+    position: absolute;
+    bottom: -54px;
+    width: 59px;
+    height: 52px;
+    left: 50px;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {   
+  #imageForm {
+  background-position: 15% 60%;
+  background-size: 45% auto;
+  left: 10%;
+  top: 0%; 
+  }
+
+    /*Quita Emoticon / Respuestas Click / Me gusta mucho*/
+    #bloque1  .resp .avatar4,
+    #bloque4  .resp .avatar4,        
+    #bloque7  .resp .avatar4,
+    #bloque10 .resp .avatar4{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me gusta algo*/
+    #bloque1  .resp .avatar3,
+    #bloque4  .resp .avatar3,        
+    #bloque7  .resp .avatar3,
+    #bloque10 .resp .avatar3{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me es indiferente*/
+    #bloque1  .resp .avatar2,
+    #bloque4  .resp .avatar2,        
+    #bloque7  .resp .avatar2,
+    #bloque10 .resp .avatar2{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada poco*/
+    #bloque1  .resp .avatar1,
+    #bloque4  .resp .avatar1,        
+    #bloque7  .resp .avatar1,
+    #bloque10 .resp .avatar1{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada mucho*/
+    #bloque1  .resp .avatar0,
+    #bloque4  .resp .avatar0,        
+    #bloque7  .resp .avatar0,
+    #bloque10 .resp .avatar0{
+    display: none;
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {  
+  #imageForm {
+  background-position: 15% 40%;
+  background-size: 45% auto;
+  left: 10%;
+  top: 0%;
+  }
+    /*Quita Emoticon / Respuestas Click / Me gusta mucho*/
+    #bloque1  .resp .avatar4,
+    #bloque4  .resp .avatar4,        
+    #bloque7  .resp .avatar4,
+    #bloque10 .resp .avatar4{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me gusta algo*/
+    #bloque1  .resp .avatar3,
+    #bloque4  .resp .avatar3,        
+    #bloque7  .resp .avatar3,
+    #bloque10 .resp .avatar3{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me es indiferente*/
+    #bloque1  .resp .avatar2,
+    #bloque4  .resp .avatar2,        
+    #bloque7  .resp .avatar2,
+    #bloque10 .resp .avatar2{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada poco*/
+    #bloque1  .resp .avatar1,
+    #bloque4  .resp .avatar1,        
+    #bloque7  .resp .avatar1,
+    #bloque10 .resp .avatar1{
+    display: none;
+  }
+    /*Quita Emoticon / Respuestas Click / Me desagrada mucho*/
+    #bloque1  .resp .avatar0,
+    #bloque4  .resp .avatar0,        
+    #bloque7  .resp .avatar0,
+    #bloque10 .resp .avatar0{
+    display: none;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {   
+  #imageForm {
+  background-position: 15% auto;
+  background-size: 45% auto;
+  left: 10%;
+  top: 0%;
+  }
+}
+
+/* Mensaje alerta de posición móvil*/
+ #aviso-movil-horizontal { display: none; }
+
+@media only screen and (orientation:portrait) {
+    
+    #wrapper { display:none; }
+    
+    #aviso-movil-horizontal { 
+      display:block; 
+      font-family: 'Lato', Calibri, Arial, sans-serif;
+      font-size: 6vw;
+      font-weight: 100;
+      text-align: justify;
+      padding: 4px 5px 0 !important;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,1);
+      cursor: default;
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -ms-user-select:none;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+
+    #aviso-movil-horizontal { display:none; }
+}
+
+/*@media screen and (max-width: 924px) {*/
+    /*#imageForm {*/
+      /*background: 20% 20%;*/
+      /*background-position: 15% 60%;*/
+   /*background-size: 45% auto;*/
+       /*left: 10%;*/
+    /*top: 0%;*/
+  /*}*/
+/*}*/
+
+
+/*
 @media screen and (max-width: 924px) {
+  .slide h1, .slide h2, 
+  .slide .bck {
+    font-size: 1.5em;
+  }
+}*/
+
+/*@media screen and (max-width: 924px) {
   .Instrucciones {
     font-size: 1.2em;
   }
-}
+}*/
 
 /*@media screen and (max-width: 1024px){
   .slide .bck, {
     font-size: 1em;
   }
 }*/
-@media screen and (max-width: 1024px){
+/*@media screen and (max-width: 1024px){
   img {
     width: 10%;
     height: auto;
   }
-}
-@media screen and (max-width: 1024px){
-  #Signo {
-    width: 20%;
+}*/
+
+/*@media screen and (max-width: 1024px){
+  .resp {
+    width: 15%;
     height: auto;
   }
 }
+*/

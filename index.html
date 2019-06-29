@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>UAA - Test Vocacional</title>
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>UAA - Test de Orientación Vocacional</title>
 		<link rel="shortcut icon" href="img/SoloLogoChico.png" type="image/png" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/core.css" />
@@ -26,11 +27,16 @@
 
 					<!-- Presentación del sistema -->
 					<li>
-						<div class="slide">
+						<div class="slide noTab">
+							
+							<!-- Aviso de móvil modo Vertical  -->
+							<div id="aviso-movil-horizontal"> Por favor, activa y coloca tu móvil en horizontal.</div>
+							<div id="wrapper"> </div>
+
 							<img class="icon" src="img/SoloLogoChicoBlanco.png" />
 							<div class="text-center">
-								<h1>Universidad Americana de Acapulco</h1>
-								<h2>Test Vocacional</h2>
+								<h1 id="Titulo"><b style="color: #d5271b">U</b><b>niversidad</b> <b style="color: #d5271b">A</b><b>mericana de</b> <b style="color: #d5271b">A</b><b>capulco</b></h1>
+								<h2 id="Subtitulo">Test de Orientación Vocacional</h2>
 								<button class="siguienteSlide btnOrange"><span class="glyphicon glyphicon-user"></span> Iniciar</button>
 							</div>
 						</div>
@@ -38,51 +44,41 @@
 
 					<!-- Objetivo del Test Vocacional -->
 					<li>
-						<div class="slide">
-							<img id="Signo" src="img/Signo.png" />
-							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> ¿Qué es un Test Vocacional?</h1>
+						<div class="slide" id="background">
+							<h1 id="tituloConcepto"><img src="img/SoloLogoChicoBlanco.png" width="8.6%" /> ¿Qué es un <b>test de orientación vocacional</b>?</h1> 
 							<blockquote class="bck">
- 								<p align="justify">Prueba cuyo objetivo es orientarle sobre la carrera que más se adecue a sus intereses y aptitudes.</p>
+ 								<p align="justify" ><b style="color: #d5271b">P</b>rueba cuyo objetivo es orientarle sobre la carrera que más se adecue a sus intereses y aptitudes.</p>
 							</blockquote>
-							<button class="siguienteSlide btnOrange">
-								<span class="glyphicon glyphicon-chevron-right"></span> Continuar
-							</button>
+							<button class="siguienteSlide btnOrange"><span class="glyphicon glyphicon-chevron-right"></span> Continuar</button>
 						</div>
 					</li>
 
 					<!-- Formulario de Contacto -->
 					<li>
-						<div class="slide">
-							<h2><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Formulario de Contacto</h2>
+						<div class="slide" id="imageForm">
+							<h2><img src="img/SoloLogoChicoBlanco.png" width="8.6%" /> Formulario de Contacto</h2>
 
-
-							<form class="cmxform" id="commentForm" method="get" action="">
+							
+							<form class="cmxform" id="commentForm">
 
 							    <label class="formLabel" for="cname">Nombre(s) completo</label> <br>
-							    <input name="cname" type="text" id="cname" minlength="3" placeholder="Escribe tu Nombre completo" /><span class="glyphicon"></span>
-
-								<br>
-								<br>
+							    <input name="cname" type="text" id="cname" minlength="3" placeholder="Escribe tu nombre completo" /><span class="glyphicon"></span>
 
 								<label class="formLabel" for="cemail">E-mail</label> <br>
-								<input name="cemail" type="email" id="cemail" placeholder="Escribe tu  E-mail" />
+								<input name="cemail" type="email" id="cemail" placeholder="Escribe tu e-mail" />
 
-								<br>
-								<br>
 
 								<label class="formLabel" for="ctel">Teléfono</label> <br>
 								<input name="ctel" type="number" id="ctel" placeholder="LADA + Teléfono" />
 
-								<br>
-								<br>
+								
 							    <label class="formLabel" for="cdomicilio">Domicilio</label> <br>
-							    <input name="cdomicilio" type="text" id="cdomicilio" placeholder="Calle, # , Colonia , C.P." />
+							    <input name="cdomicilio" type="text" id="cdomicilio" placeholder="Calle, # , colonia , C.P." />
 
-								<br>
-								<br>
 
-							    <label class="formLabel" for="ctutor">Nombre del padre o tutor</label> <br>
-							    <input name="ctutor" type="text" id="ctutor" minlength="7" placeholder="Nombre completo" />
+							    <label class="formLabel" for="cescuela">Escuela de procedencia</label> <br>
+							    <input name="cescuela" type="text" id="cescuela" minlength="7" placeholder="Nombre de escuela" />
+
 								<br>
 								<br>
 
@@ -96,25 +92,26 @@
 					<!-- Instrucciones generales -->
 					<li>
 						<div class="slide">
-							<h1><img src="img/SoloLogoChicoBlanco.png" width="70px" /> Test de Intereses</h1>
+							<h1><img src="img/SoloLogoChicoBlanco.png" width="8.6%" /> Test de intereses y aptitudes</h1>
 							<h1><span class="glyphicon glyphicon-flag"></span> Instrucciones Generales</h1>
 
-								<p class="Instrucciones" align="justify">A continuación se te presentarán 6 bloques con 10 preguntas cada uno, al final serán 60 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Que me gusta hacer? ¿Qué me interesa?.</p>
+								<p class="Instrucciones" align="justify"><b style="color: #d5271b">A</b> continuación se presentarán 12 bloques con 10 preguntas cada uno, al final serán 120 preguntas que conforman este test, cada bloque tiene una forma de resolución e interacción diferente, lee cuidadosamente las instrucciones y contesta la opción más acorde con tu sentir o con tu punto de vista, tomando en cuenta: <br />¿Qué me gusta hacer? ¿Qué me interesa?.</p>
 
 
 							<button class="iniciarTest btnOrange" data-modal="modal-4"><span class="glyphicon glyphicon-play"></span> Iniciar Test</button>
-
+							<!--  -->
 						</div>
 					</li>
 
 					<!-- Bloque 1 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq1" id="bloque1">
-
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div id="bloque1">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
+						          	<!-- <ins class="noborder">hola</ins> -->
 						            <div class="resp resp4" data-item="4"></div>
 						            <div class="resp resp3" data-item="3"></div>
 						            <div class="resp resp2" data-item="2"></div>
@@ -123,6 +120,8 @@
 						          </div>
 						        </p>
 						    </div>
+							<img src="img/sisomosunam.png" class="unam" alt="">
+						    <!-- <p id="LogoSlideDown"><img src="img/line.png" width="20%" /> </p> -->
 						</div>
 					</li>
 					<!-- /Bloque 1 -->
@@ -130,8 +129,9 @@
 					<!-- Bloque 2 -->
 					<li>
 						<div class="slide">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /></p>
 							<div id="bloque2">
-								<div class="cajaPregunta"></div>
+								<div class="cajaPregunta" id="posDrag"></div>
 								<p>
 								  <div class="cajaRespuestas">
 								    <div class="dragResp resp4" data-item="4"></div>
@@ -141,7 +141,7 @@
 								    <div class="dragResp resp0" data-item="0"></div>
 								  </div>
 								</p>
-								<div class="objetoDroppable"></div>
+								<img src="img/Emoticons/Cesto.png" class="objetoDroppable" alt="">
 							</div>
 						</div>
 					</li>
@@ -150,10 +150,12 @@
 					<!-- Bloque 3 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq3" id="bloque3">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div class="posBloq3 position" id="bloque3">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
+						          <br>
 						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
 						          <button class="btnSiguiente btnOrange">
 						          <span class="glyphicon glyphicon-chevron-right"></span>Continuar
@@ -167,7 +169,8 @@
 					<!-- Bloque 4 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq1" id="bloque4">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div id="bloque4">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -179,6 +182,8 @@
 						          </div>
 						        </p>
 						    </div>
+							<img src="img/sisomosunam.png" class="unam" alt="">
+						    <!-- <p id="LogoSlideDown"><img src="img/SoloLogoChicoBlanco.png" width="10%" /></p> -->
 						</div>
 					</li>
 					<!-- /Bloque 4 -->
@@ -186,10 +191,11 @@
 					<!-- Bloque 5 -->
 					<li>
 						<div class="slide">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /></p>
 							<div id="bloque5">
-								<div class="cajaPregunta"></div>
+								<div class="cajaPregunta" id="posDrag"></div>
 								<p>
-								  <div class="cajaRespuestas">
+								  <div class="cajaRespuestas" id="posDrag">
 								    <div class="dragResp resp4" data-item="4"></div>
 								    <div class="dragResp resp3" data-item="3"></div>
 								    <div class="dragResp resp2" data-item="2"></div>
@@ -197,7 +203,7 @@
 								    <div class="dragResp resp0" data-item="0"></div>
 								  </div>
 								</p>
-								<div class="objetoDroppable"></div>
+								<img src="img/Emoticons/Cesto.png" class="objetoDroppable" alt="">
 							</div>
 						</div>
 					</li>
@@ -206,10 +212,12 @@
 					<!-- Bloque 6 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq3" id="bloque6">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div class="posBloq6 position" id="bloque6">
 					        	<div class="cajaPregunta"></div>
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
+						          <br>
 						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
 						          <button class="btnSiguiente btnOrange">
 						          <span class="glyphicon glyphicon-chevron-right"></span>Continuar
@@ -223,8 +231,8 @@
 					<!-- Bloque 7 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq7" id="bloque7">
-
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div id="bloque7">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -235,6 +243,8 @@
 						            <div class="resp resp0" data-item="0"></div>
 						          </div>
 						        </p>
+							<img src="img/sisomosunam.png" class="unam" alt="">
+						        <!-- <p id="LogoSlideDown"><img src="img/SoloLogoChicoBlanco.png" width="10%" /></p> -->
 						    </div>
 						</div>
 					</li>
@@ -243,8 +253,9 @@
 					<!-- Bloque 8 -->
 					<li>
 						<div class="slide">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /></p>
 							<div id="bloque8">
-								<div class="cajaPregunta"></div>
+								<div class="cajaPregunta" id="posDrag"></div>
 								<p>
 								  <div class="cajaRespuestas">
 								    <div class="dragResp resp4" data-item="4"></div>
@@ -254,7 +265,7 @@
 								    <div class="dragResp resp0" data-item="0"></div>
 								  </div>
 								</p>
-								<div class="objetoDroppable"></div>
+								<img src="img/Emoticons/Cesto.png" class="objetoDroppable" alt="">
 							</div>
 						</div>
 					</li>
@@ -263,9 +274,11 @@
 					<!-- Bloque 9 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq9" id="bloque9">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div class="posBloq12" id="bloque9">
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
+						          <br>
 						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
 						          <button class="btnSiguiente btnOrange">
 						          <span class="glyphicon glyphicon-chevron-right"></span>Continuar
@@ -279,7 +292,8 @@
 					<!-- Bloque 10 -->
 					<li>
 						<div class="slide">
-							<div class="posBloq10" id="bloque10">
+						<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
+							<div id="bloque10">
 					        	<div class="cajaPregunta"></div>
 						        <p>
 						          <div class="cajaRespuestas">
@@ -290,6 +304,8 @@
 						            <div class="resp resp0" data-item="0"></div>
 						          </div>
 						        </p>
+								<img src="img/sisomosunam.png" class="unam" alt="">
+						        <!-- <p id="LogoSlideDown"><img src="img/SoloLogoChicoBlanco.png" width="10%" /></p> -->
 						    </div>
 						</div>
 					</li>
@@ -298,8 +314,9 @@
 					<!-- Bloque 11 -->
 					<li>
 						<div class="slide">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /></p>
 							<div id="bloque11">
-								<div class="cajaPregunta"></div>
+								<div class="cajaPregunta" id="posDrag"></div>
 								<p>
 								  <div class="cajaRespuestas">
 								    <div class="dragResp resp4" data-item="4"></div>
@@ -309,7 +326,7 @@
 								    <div class="dragResp resp0" data-item="0"></div>
 								  </div>
 								</p>
-								<div class="objetoDroppable"></div>
+								<img src="img/Emoticons/Cesto.png" class="objetoDroppable" alt="">
 							</div>
 						</div>
 					</li>
@@ -318,9 +335,11 @@
 					<!-- Bloque 12 -->
 					<li>
 						<div class="slide">
+							<p id="LogoSlide"><img src="img/SoloLogoChicoBlanco.png" width="5%" /> Universidad Americana de Acapulco<br> "Excelencia para el desarrollo"</p>
 							<div class="posBloq12" id="bloque12">
 					        	<div class="cajaRespuestas">
 						          <table class="preguntasRespuestas"></table>
+						          <br>
 						          <!-- <input type="button" value="Siguiente" class="btnSiguiente" /> -->
 						          <button class="btnSiguiente btnOrange">
 						          <span class="glyphicon glyphicon-chevron-right"></span>Continuar
@@ -330,28 +349,36 @@
 						</div>
 					</li>
 					<!-- Bloque 12 -->
-
 					<!-- Resultados -->
 					<li>
 						<div class="slide">
 
 							<div class="containerGrafica">
 								<div class="grid12">
-									Resultados
+									<img src="img/SoloLogoChicoBlanco.png" width="5%"/><b style="color: #d5271b"> R</b>esultados
 								</div>
+
+
+								<!-- <button type="button" class="btn btn-sm btn-danger" data-placement="top" data-toggle="popover" title="Contacto" data-content="Av. Costera Miguel Alemán No. 1756, Fracc. Magallanes, Acapulco, Guerrero, México. C.P. 39670.      Teléfono: 01 (744) 4691700 Ext. 1023"><span class="glyphicon glyphicon-earphone"></span> Contactanos</button> -->
 								<div class="ladoIzq">
-									<h3>Grafica de Intereses</h3>
-									<div style="width:30%">
+									<h3 class="fondoImage"> Gráfica de Intereses</h3>
+									<div style="width:75%;  margin: 0 auto">
+									
 						       	<canvas id="chart-area" width="300" height="300"/>
 						    	</div>
+						    	<button class="btnwaterMelon modalCon1" data-toggle="tooltip" title="Click para conocer definiciones">  Definiciones de intereses </button>
 								</div>
-								<div class="ladoDer">
-									<h3>Grafica de Aptitudes</h3>
-									<div style="width:30%">
-						       	<canvas id="apt-area" width="300" height="300"/>
-						    	</div>
 
-									<dl>
+								<div class="ladoDer">
+									<h3 class="fondoImage">Gráfica de Aptitudes</h3>
+									<div style="width:75%; margin: 0 auto">
+								
+						       	<canvas id="apt-area" width="300" height="300"/>
+
+						    	</div>
+								<button class="btnwaterMelon modalCon2" data-toggle="tooltip" title="Click para conocer definiciones">  Definiciones de aptitudes </button>								
+								<!-- <button class="btnEnviar"> Enviar datos </button> -->
+<!-- 									<dl>
 										<dt><button class="btnwaterMelon modalCon1">  Interés por Servicio Social 			    </button></dt>
 										<dt><button class="btnBlueWater modalCon2">   Interés Persuasivo 								    </button></dt>
 										<dt><button class="btnMamey modalCon3">       Interés Verbal 												</button></dt>
@@ -362,17 +389,37 @@
 										<dt><button class="btnBrown modalCon8">       Interés por Cálculo Númerico					</button></dt>
 										<dt><button class="btnstrongBlue modalCon9">  Interés Mecánico 									    </button></dt>
 										<dt><button class="btnPurple modalCon10">     Interés por Actividades al Aíre Libre </button></dt>
-									</dl>
+									</dl> -->
 								</div>
+
 								<div class="clearfix">
 
-								<div class="grid12">
+								<div class="ladoIzq">
+									<h3 class="fondoImage tituloGrafica">En base a tus intereses tus opciones son: </h3>
+									<div style="width:75%;  margin: 0 auto">
+									
+						       		<div class="grid5" id="carrerasIntereses"></div>
+									<!-- <div class="grid4">Turismo</div>
+									<div class="grid4">Administración</div> -->
+						    		</div>
+						    	</div>
+
+						    	<div class="ladoDer">
+									<h3 class="fondoImage tituloGrafica">En base a tus aptitudes tus opciones son: </h3>
+									<div style="width:75%;  margin: 0 auto">
+									<div class="grid5" id="carrerasAptitudes"></div>
+							<!-- 		<div class="grid4">Gastronomía</div>
+									<div class="grid4">Derecho</div> -->
+						       	
+						    		</div>
+						    	</div>
+<!-- 								<div class="grid12">
 									Eres apto para las siguientes materias
 									<div class="grid4">a</div>
 									<div class="grid4">b</div>
 									<div class="grid4">c</div>
 									<div class="clearfix"></div>
-								</div>
+								</div> -->
 								</div>
 							</div>
 						</div>
@@ -415,117 +462,34 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto1" id="modal-2">
+				
+		<!-- Ventana modal Conceptos de Intereses -->
+		<div class="md-modal md-effect-8 modalConceptoInt scrollModal" id="modal-8">
 			<div class="md-content">
-				<h3>¿Interés de Servicio Social?</h3>
+
+				<h3></h3>
 				<div>
-					<p>Es el gusto por servir a los demás, y en primer lugar por los necesitados, niños y ancianos. </p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+					
 				</div>
+				<button class="md-close btnRed btnFlotante"><span class="glyphicon glyphicon-remove"></span></button>
 			</div>
 		</div>
 
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto2" id="modal-2">
+		<!-- Ventana modal Conceptos de Aptitudes -->
+		<div class="md-modal md-effect-18 modalConceptoApt scrollModal" id="modal-18">
 			<div class="md-content">
-				<h3>¿Interés Persuasivo?</h3>
-				<div>
-					<p>Es el gusto del trato por la gente, a  quienes agrada imponer sus puntos de vista, convencer a los demás respecto a un proyecto, vender algún articulo, etc. </p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
 
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto3" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés Verbal?</h3>
+				<h3></h3>
 				<div>
-					<p>Es el gusto por la lectura o el placer por expresar sus ideas en forma oral o escrita.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
 
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto4" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés de Artes Plasticas?</h3>
-				<div>
-					<p>Es el gusto por hacer trabajos de tipo manual, usando combinaciones de colores, materiales, formas y diseñador.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
+					
 				</div>
+				<button class="md-close btnRed btnFlotante"><span class="glyphicon glyphicon-remove"></span></button>
 			</div>
 		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto5" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés Musical?</h3>
-				<div>
-					<p>Es un marcado gusto por tocar instrumentos musicales, cantar, bailar, leer sobre música, asistir a conciertos, estudiar la vida de destacados compositores, etc.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto6" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés de Organización y Oficina?</h3>
-				<div>
-					<p>Es el gusto por un tipo de trabajo de escritorio que requiere exactitud y precisión.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto7" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés Científico?</h3>
-				<div>
-					<p>Es el placer o gusto por investigar la verdadera razón de los hechos o de las cosas, en descubrir sus causas y en resolver problemas de distinta índole, por mera curiosidad científica y sin pensar en los beneficios económicos que puedan resultar de la investigación. </p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto8" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés de Cálculo Númerico?</h3>
-				<div>
-					<p>Es el gusto por trabajar con números.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto9" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés Mécanico</h3>
-				<div>
-					<p>Es la preferencia por trabajar con maquinas y herramientas, construir o arreglar objetos mecánicos, muebles, artefactos eléctricos, etc</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ventana modal Conceptos -->
-		<div class="md-modal md-effect-2 modalConcepto10" id="modal-2">
-			<div class="md-content">
-				<h3>¿Interés por Actividades al Aíre Libre?</h3>
-				<div>
-					<p>El gusto  por pasar la mayor parte del tiempo en el campo, en los bosques o en el mar, también    por cultivar plantas y cuidar animales.</p>
-					<button class="md-cerrarFormAlert btnRed"><span class="glyphicon glyphicon-pencil"></span> Cerrar</button>
-				</div>
-			</div>
-		</div>
-		<div class="md-overlay"></div><!-- the overlay element -->
+		
+		<!-- the overlay element -->
+		<div class="md-overlay"></div>
 
 		<!-- Js Compartido -->
 		<script src="js/classie.js"></script>

@@ -118,12 +118,17 @@ body,
 .slide .bck {
 	margin: 0;
 	font-weight: 100;
-	font-size: 2.5em;
+	font-size: 2.5vw;
 	padding-top: 3%;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	border: 0;
 	color: #fff;
+	cursor: default;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
 }
 
 .slide h1 {
@@ -133,12 +138,17 @@ body,
 .slide h2{
 	margin: 0;
 	font-weight: 100;
-	font-size: 3em;
+	font-size: 3vw;
 	padding: 3% 0;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	border: 0;
-	color: #fff;	
+	color: #fff;
+	cursor: default;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;	
 }
 
 /*.slide > p {
@@ -168,6 +178,7 @@ body,
 .slide .bck p {
 	margin: 0;
 	line-height: 1.2;
+	cursor: default;
 }
 
 .slide .bck + p {
@@ -178,7 +189,7 @@ body,
 	display: block;
 	padding-top: 3%;
 	position: relative;
-	margin: 0 auto 50px;
+	margin: 0 auto 5.5%;
 	width: 50%;
 	max-width: 250px;
 }
@@ -235,3 +246,4 @@ body,
 	}
 
 }
+	
